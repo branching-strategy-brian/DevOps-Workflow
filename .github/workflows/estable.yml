@@ -5,6 +5,11 @@ on:
     branches:
       - estable/*
 
+  workflow_call:
+
+permissions:
+  pull-requests: write
+
 env:
   GITHUB_TOKEN: ${{ secrets.TOKEN }}
   PROYECTO: ${{ secrets.CELULA }}
