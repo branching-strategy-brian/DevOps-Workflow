@@ -29,11 +29,20 @@ jobs:
     outputs: 
       branch: ${{ steps.extract_branch.outputs.branch }}
       proyect: ${{ steps.split.outputs._1 }}
+  Actor:
+    needs: Current-Branch
+    steps:
+      - name: Extract actor
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_ACTOR#refs/heads/})"
+        id: extract_actor
+    outputs: 
+      actor: ${{ steps.extract_actor.outputs.branch }}
   Sync-Branch:
     runs-on: ubuntu-latest
     environment:
       name: main/${{needs.Current-Branch.outputs.proyect}}
-    needs: Current-Branch
+    needs: Actor
     steps:
       - uses: actions/checkout@master
       - name: Merge preproduccion and main
@@ -43,6 +52,7 @@ jobs:
           from_branch: ${{needs.Current-Branch.outputs.branch}}
           target_branch: main
           github_token: ${{ github.token }}
+          message: '${{needs.Actor.outputs.actor}}: Merge preproduccion and main ${{needs.Current-Branch.outputs.proyect}}'
 
   CreatePullRequest:
     runs-on: ubuntu-latest
