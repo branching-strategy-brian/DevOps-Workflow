@@ -12,30 +12,48 @@ permissions:
 
 env:
   GITHUB_TOKEN: ${{ secrets.TOKEN }}
-  PROYECTO: ${{ secrets.CELULA }}
   
 jobs:
-  sync-branch:
+  Current-Branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - name: Print varible
+        run: 
+          echo ${{ steps.extract_branch.outputs.branch }}
+      - uses: jungwinter/split@v2
+        id: split
+        with:
+          msg: '${{ steps.extract_branch.outputs.branch }}'
+          separator: '/'
+      - name: Release proyect
+        run:
+          echo ${{ steps.split.outputs._1 }}
+  Sync-Branch:
     runs-on: ubuntu-latest
     environment:
-      name: estable/$PROYECTO
+      name: estable/${{ steps.split.outputs._1 }}
+    needs: Current-Branch
     steps:
       - uses: actions/checkout@master
       - name: Merge qa and estable
         uses: devmasx/merge-branch@master
         with:
           type: now
-          from_branch: qa/$PROYECTO
-          target_branch: estable/$PROYECTO
+          from_branch: ${{ steps.extract_branch.outputs.branch }}
+          target_branch: estable/${{ steps.split.outputs._1 }}
           github_token: ${{ github.token }}
 
-  createPullRequest:
+  CreatePullRequest:
     runs-on: ubuntu-latest
     environment:
-      name: estable/$PROYECTO
-    needs: sync-branch
+      name: estable/${{ steps.split.outputs._1 }}
+    needs: Sync-Branch
     steps:
       - uses: actions/checkout@v3
       - name: Make changes to pull request
         run:
-          curl -X POST -u $GITHUB_TOKEN:x-oauth-basic -H "Accept:application/vnd.github+json" https://api.github.com/repos/bgarrido2314/branching-strategy/pulls -d '{"title":"Estable/$PROYECTO-Preproduccion/$PROYECTO","body":"Please pull these new changes in!","head":"estable/$PROYECTO","base":"preproduccion/$PROYECTO"}'
+          curl -X POST -u $GITHUB_TOKEN:x-oauth-basic -H "Accept:application/vnd.github+json" https://api.github.com/repos/bgarrido2314/branching-strategy/pulls -d '{"title":Estable/${{ steps.split.outputs._1 }}-Preproduccion/${{ steps.split.outputs._1 }}","body":"Please pull these new changes in!","head":"estable/${{ steps.split.outputs._1 }}","base":preproduccion/${{ steps.split.outputs._1 }}"}'
