@@ -32,10 +32,13 @@ jobs:
       - name: Release proyect
         run:
           echo ${{ steps.split.outputs._1 }}
+    outputs: 
+      branch: ${{ steps.extract_branch.outputs.branch }}
+      proyect: ${{ steps.split.outputs._1 }}
   Sync-Branch:
     runs-on: ubuntu-latest
     environment:
-      name: qa/${{ steps.split.outputs._1 }}
+      name: qa/${{needs.Current-Branch.outputs.proyect}}
     needs: Current-Branch
     steps:
       - uses: actions/checkout@master
@@ -43,17 +46,17 @@ jobs:
         uses: devmasx/merge-branch@master
         with:
           type: now
-          from_branch: ${{ steps.extract_branch.outputs.branch }}
-          target_branch: qa/${{ steps.split.outputs._1 }}
+          from_branch: ${{needs.Current-Branch.outputs.branch}}
+          target_branch: qa/${{needs.Current-Branch.outputs.proyect}}
           github_token: ${{ github.token }}
 
   CreatePullRequest:
     runs-on: ubuntu-latest
     environment:
-      name: qa/${{ steps.split.outputs._1 }}
+      name: qa/${{needs.Current-Branch.outputs.proyect}}
     needs: Sync-Branch
     steps:
       - uses: actions/checkout@v3
       - name: Make changes to pull request
         run:
-          curl -X POST -u $GITHUB_TOKEN:x-oauth-basic -H "Accept:application/vnd.github+json" https://api.github.com/repos/bgarrido2314/branching-strategy/pulls -d '{"title":"Qa/${{ steps.split.outputs._1 }}-Estable/${{ steps.split.outputs._1 }}","body":"Please pull these new changes in!","head":"qa/${{ steps.split.outputs._1 }}","base":"estable/${{ steps.split.outputs._1 }}"}'
+          curl -X POST -u $GITHUB_TOKEN:x-oauth-basic -H "Accept:application/vnd.github+json" https://api.github.com/repos/bgarrido2314/branching-strategy/pulls -d '{"title":"Qa/${{needs.Current-Branch.outputs.proyect}}-Estable/${{needs.Current-Branch.outputs.proyect}}","body":"Please pull these new changes in!","head":"qa/${{needs.Current-Branch.outputs.proyect}}","base":"estable/${{needs.Current-Branch.outputs.proyect}}"}'
