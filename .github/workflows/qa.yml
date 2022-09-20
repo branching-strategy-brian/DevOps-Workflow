@@ -21,17 +21,11 @@ jobs:
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_HEAD_REF#refs/heads/})"
         id: extract_branch
-      - name: Print varible
-        run: 
-          echo ${{ steps.extract_branch.outputs.branch }}
       - uses: jungwinter/split@v2
         id: split
         with:
           msg: '${{ steps.extract_branch.outputs.branch }}'
           separator: '/'
-      - name: Release proyect
-        run:
-          echo ${{ steps.split.outputs._1 }}
     outputs: 
       branch: ${{ steps.extract_branch.outputs.branch }}
       proyect: ${{ steps.split.outputs._1 }}
