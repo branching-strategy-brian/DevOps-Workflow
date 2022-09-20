@@ -21,6 +21,10 @@ jobs:
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_HEAD_REF#refs/heads/})"
         id: extract_branch
+      - name: Extract actor
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_ACTOR#refs/heads/})"
+        id: extract_actor
       - uses: jungwinter/split@v2
         id: split
         with:
@@ -29,20 +33,12 @@ jobs:
     outputs: 
       branch: ${{ steps.extract_branch.outputs.branch }}
       proyect: ${{ steps.split.outputs._1 }}
-  Actor:
-    needs: Current-Branch
-    steps:
-      - name: Extract actor
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_ACTOR#refs/heads/})"
-        id: extract_actor
-    outputs: 
       actor: ${{ steps.extract_actor.outputs.branch }}
   Sync-Branch:
     runs-on: ubuntu-latest
     environment:
       name: qa/${{needs.Current-Branch.outputs.proyect}}
-    needs: Actor
+    needs: Current-Branch
     steps:
       - uses: actions/checkout@master
       - name: Merge dev and qa
@@ -52,7 +48,7 @@ jobs:
           from_branch: ${{needs.Current-Branch.outputs.branch}}
           target_branch: qa/${{needs.Current-Branch.outputs.proyect}}
           github_token: ${{ github.token }}
-          message: '${{needs.Actor.outputs.actor}}: Merge dev and qa ${{needs.Current-Branch.outputs.proyect}}'
+          message: '${{needs.Current-Branch.outputs.actor}}: Merge dev and qa ${{needs.Current-Branch.outputs.proyect}}'
   CreatePullRequest:
     runs-on: ubuntu-latest
     environment:
