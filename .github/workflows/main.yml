@@ -38,7 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: main/${{needs.Current-Branch.outputs.proyect}}
-    needs: Actor
+    needs: Current-Branch
     steps:
       - uses: actions/checkout@master
       - name: Merge preproduccion and main
