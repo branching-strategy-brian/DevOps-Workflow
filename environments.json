@@ -1,0 +1,505 @@
+{
+    "total_count": 10,
+    "environments": [
+      {
+        "id": 638564889,
+        "node_id": "EN_kwDOIBUh3M4mD7oZ",
+        "name": "dev/celula1",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/dev/celula1",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=dev%2Fcelula1",
+        "created_at": "2022-09-20T17:59:50Z",
+        "updated_at": "2022-09-20T17:59:50Z",
+        "protection_rules": [
+          {
+            "id": 1656657,
+            "node_id": "GA_kwDOIBUh3M4AGUdR",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "bgarrido2314",
+                  "id": 111394144,
+                  "node_id": "U_kgDOBqO9YA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111394144?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/bgarrido2314",
+                  "html_url": "https://github.com/bgarrido2314",
+                  "followers_url": "https://api.github.com/users/bgarrido2314/followers",
+                  "following_url": "https://api.github.com/users/bgarrido2314/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/bgarrido2314/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/bgarrido2314/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/bgarrido2314/subscriptions",
+                  "organizations_url": "https://api.github.com/users/bgarrido2314/orgs",
+                  "repos_url": "https://api.github.com/users/bgarrido2314/repos",
+                  "events_url": "https://api.github.com/users/bgarrido2314/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/bgarrido2314/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656662,
+            "node_id": "GA_kwDOIBUh3M4AGUdW",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638565158,
+        "node_id": "EN_kwDOIBUh3M4mD7sm",
+        "name": "dev/celula2",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/dev/celula2",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=dev%2Fcelula2",
+        "created_at": "2022-09-20T18:00:03Z",
+        "updated_at": "2022-09-20T18:00:03Z",
+        "protection_rules": [
+          {
+            "id": 1656680,
+            "node_id": "GA_kwDOIBUh3M4AGUdo",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "inievesc",
+                  "id": 111395000,
+                  "node_id": "U_kgDOBqPAuA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111395000?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/inievesc",
+                  "html_url": "https://github.com/inievesc",
+                  "followers_url": "https://api.github.com/users/inievesc/followers",
+                  "following_url": "https://api.github.com/users/inievesc/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/inievesc/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/inievesc/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/inievesc/subscriptions",
+                  "organizations_url": "https://api.github.com/users/inievesc/orgs",
+                  "repos_url": "https://api.github.com/users/inievesc/repos",
+                  "events_url": "https://api.github.com/users/inievesc/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/inievesc/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656699,
+            "node_id": "GA_kwDOIBUh3M4AGUd7",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638565721,
+        "node_id": "EN_kwDOIBUh3M4mD71Z",
+        "name": "estable/celula1",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/estable/celula1",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=estable%2Fcelula1",
+        "created_at": "2022-09-20T18:00:30Z",
+        "updated_at": "2022-09-20T18:00:30Z",
+        "protection_rules": [
+          {
+            "id": 1656799,
+            "node_id": "GA_kwDOIBUh3M4AGUff",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "bgarrido2314",
+                  "id": 111394144,
+                  "node_id": "U_kgDOBqO9YA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111394144?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/bgarrido2314",
+                  "html_url": "https://github.com/bgarrido2314",
+                  "followers_url": "https://api.github.com/users/bgarrido2314/followers",
+                  "following_url": "https://api.github.com/users/bgarrido2314/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/bgarrido2314/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/bgarrido2314/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/bgarrido2314/subscriptions",
+                  "organizations_url": "https://api.github.com/users/bgarrido2314/orgs",
+                  "repos_url": "https://api.github.com/users/bgarrido2314/repos",
+                  "events_url": "https://api.github.com/users/bgarrido2314/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/bgarrido2314/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656805,
+            "node_id": "GA_kwDOIBUh3M4AGUfl",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638565955,
+        "node_id": "EN_kwDOIBUh3M4mD75D",
+        "name": "estable/celula2",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/estable/celula2",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=estable%2Fcelula2",
+        "created_at": "2022-09-20T18:00:41Z",
+        "updated_at": "2022-09-20T18:00:41Z",
+        "protection_rules": [
+          {
+            "id": 1656827,
+            "node_id": "GA_kwDOIBUh3M4AGUf7",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "inievesc",
+                  "id": 111395000,
+                  "node_id": "U_kgDOBqPAuA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111395000?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/inievesc",
+                  "html_url": "https://github.com/inievesc",
+                  "followers_url": "https://api.github.com/users/inievesc/followers",
+                  "following_url": "https://api.github.com/users/inievesc/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/inievesc/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/inievesc/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/inievesc/subscriptions",
+                  "organizations_url": "https://api.github.com/users/inievesc/orgs",
+                  "repos_url": "https://api.github.com/users/inievesc/repos",
+                  "events_url": "https://api.github.com/users/inievesc/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/inievesc/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656833,
+            "node_id": "GA_kwDOIBUh3M4AGUgB",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638566543,
+        "node_id": "EN_kwDOIBUh3M4mD8CP",
+        "name": "main/celula1",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/main/celula1",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=main%2Fcelula1",
+        "created_at": "2022-09-20T18:01:07Z",
+        "updated_at": "2022-09-20T18:01:07Z",
+        "protection_rules": [
+          {
+            "id": 1656929,
+            "node_id": "GA_kwDOIBUh3M4AGUhh",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "bgarrido2314",
+                  "id": 111394144,
+                  "node_id": "U_kgDOBqO9YA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111394144?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/bgarrido2314",
+                  "html_url": "https://github.com/bgarrido2314",
+                  "followers_url": "https://api.github.com/users/bgarrido2314/followers",
+                  "following_url": "https://api.github.com/users/bgarrido2314/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/bgarrido2314/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/bgarrido2314/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/bgarrido2314/subscriptions",
+                  "organizations_url": "https://api.github.com/users/bgarrido2314/orgs",
+                  "repos_url": "https://api.github.com/users/bgarrido2314/repos",
+                  "events_url": "https://api.github.com/users/bgarrido2314/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/bgarrido2314/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656930,
+            "node_id": "GA_kwDOIBUh3M4AGUhi",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638566811,
+        "node_id": "EN_kwDOIBUh3M4mD8Gb",
+        "name": "main/celula2",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/main/celula2",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=main%2Fcelula2",
+        "created_at": "2022-09-20T18:01:16Z",
+        "updated_at": "2022-09-20T18:01:16Z",
+        "protection_rules": [
+          {
+            "id": 1656952,
+            "node_id": "GA_kwDOIBUh3M4AGUh4",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "inievesc",
+                  "id": 111395000,
+                  "node_id": "U_kgDOBqPAuA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111395000?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/inievesc",
+                  "html_url": "https://github.com/inievesc",
+                  "followers_url": "https://api.github.com/users/inievesc/followers",
+                  "following_url": "https://api.github.com/users/inievesc/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/inievesc/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/inievesc/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/inievesc/subscriptions",
+                  "organizations_url": "https://api.github.com/users/inievesc/orgs",
+                  "repos_url": "https://api.github.com/users/inievesc/repos",
+                  "events_url": "https://api.github.com/users/inievesc/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/inievesc/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656956,
+            "node_id": "GA_kwDOIBUh3M4AGUh8",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638566174,
+        "node_id": "EN_kwDOIBUh3M4mD78e",
+        "name": "preproduccion/celula1",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/preproduccion/celula1",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=preproduccion%2Fcelula1",
+        "created_at": "2022-09-20T18:00:51Z",
+        "updated_at": "2022-09-20T18:00:51Z",
+        "protection_rules": [
+          {
+            "id": 1656854,
+            "node_id": "GA_kwDOIBUh3M4AGUgW",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "bgarrido2314",
+                  "id": 111394144,
+                  "node_id": "U_kgDOBqO9YA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111394144?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/bgarrido2314",
+                  "html_url": "https://github.com/bgarrido2314",
+                  "followers_url": "https://api.github.com/users/bgarrido2314/followers",
+                  "following_url": "https://api.github.com/users/bgarrido2314/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/bgarrido2314/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/bgarrido2314/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/bgarrido2314/subscriptions",
+                  "organizations_url": "https://api.github.com/users/bgarrido2314/orgs",
+                  "repos_url": "https://api.github.com/users/bgarrido2314/repos",
+                  "events_url": "https://api.github.com/users/bgarrido2314/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/bgarrido2314/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656859,
+            "node_id": "GA_kwDOIBUh3M4AGUgb",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638566375,
+        "node_id": "EN_kwDOIBUh3M4mD7_n",
+        "name": "preproduccion/celula2",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/preproduccion/celula2",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=preproduccion%2Fcelula2",
+        "created_at": "2022-09-20T18:00:59Z",
+        "updated_at": "2022-09-20T18:00:59Z",
+        "protection_rules": [
+          {
+            "id": 1656874,
+            "node_id": "GA_kwDOIBUh3M4AGUgq",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "inievesc",
+                  "id": 111395000,
+                  "node_id": "U_kgDOBqPAuA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111395000?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/inievesc",
+                  "html_url": "https://github.com/inievesc",
+                  "followers_url": "https://api.github.com/users/inievesc/followers",
+                  "following_url": "https://api.github.com/users/inievesc/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/inievesc/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/inievesc/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/inievesc/subscriptions",
+                  "organizations_url": "https://api.github.com/users/inievesc/orgs",
+                  "repos_url": "https://api.github.com/users/inievesc/repos",
+                  "events_url": "https://api.github.com/users/inievesc/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/inievesc/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656878,
+            "node_id": "GA_kwDOIBUh3M4AGUgu",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638565367,
+        "node_id": "EN_kwDOIBUh3M4mD7v3",
+        "name": "qa/celula1",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/qa/celula1",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=qa%2Fcelula1",
+        "created_at": "2022-09-20T18:00:13Z",
+        "updated_at": "2022-09-20T18:00:13Z",
+        "protection_rules": [
+          {
+            "id": 1656723,
+            "node_id": "GA_kwDOIBUh3M4AGUeT",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "bgarrido2314",
+                  "id": 111394144,
+                  "node_id": "U_kgDOBqO9YA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111394144?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/bgarrido2314",
+                  "html_url": "https://github.com/bgarrido2314",
+                  "followers_url": "https://api.github.com/users/bgarrido2314/followers",
+                  "following_url": "https://api.github.com/users/bgarrido2314/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/bgarrido2314/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/bgarrido2314/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/bgarrido2314/subscriptions",
+                  "organizations_url": "https://api.github.com/users/bgarrido2314/orgs",
+                  "repos_url": "https://api.github.com/users/bgarrido2314/repos",
+                  "events_url": "https://api.github.com/users/bgarrido2314/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/bgarrido2314/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656730,
+            "node_id": "GA_kwDOIBUh3M4AGUea",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      },
+      {
+        "id": 638565526,
+        "node_id": "EN_kwDOIBUh3M4mD7yW",
+        "name": "qa/celula2",
+        "url": "https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/environments/qa/celula2",
+        "html_url": "https://github.com/branching-strategy-brian/DevOps-Workflow/deployments/activity_log?environments_filter=qa%2Fcelula2",
+        "created_at": "2022-09-20T18:00:21Z",
+        "updated_at": "2022-09-20T18:00:21Z",
+        "protection_rules": [
+          {
+            "id": 1656760,
+            "node_id": "GA_kwDOIBUh3M4AGUe4",
+            "type": "required_reviewers",
+            "reviewers": [
+              {
+                "type": "User",
+                "reviewer": {
+                  "login": "inievesc",
+                  "id": 111395000,
+                  "node_id": "U_kgDOBqPAuA",
+                  "avatar_url": "https://avatars.githubusercontent.com/u/111395000?v=4",
+                  "gravatar_id": "",
+                  "url": "https://api.github.com/users/inievesc",
+                  "html_url": "https://github.com/inievesc",
+                  "followers_url": "https://api.github.com/users/inievesc/followers",
+                  "following_url": "https://api.github.com/users/inievesc/following{/other_user}",
+                  "gists_url": "https://api.github.com/users/inievesc/gists{/gist_id}",
+                  "starred_url": "https://api.github.com/users/inievesc/starred{/owner}{/repo}",
+                  "subscriptions_url": "https://api.github.com/users/inievesc/subscriptions",
+                  "organizations_url": "https://api.github.com/users/inievesc/orgs",
+                  "repos_url": "https://api.github.com/users/inievesc/repos",
+                  "events_url": "https://api.github.com/users/inievesc/events{/privacy}",
+                  "received_events_url": "https://api.github.com/users/inievesc/received_events",
+                  "type": "User",
+                  "site_admin": false
+                }
+              }
+            ]
+          },
+          {
+            "id": 1656766,
+            "node_id": "GA_kwDOIBUh3M4AGUe-",
+            "type": "branch_policy"
+          }
+        ],
+        "deployment_branch_policy": {
+          "protected_branches": false,
+          "custom_branch_policies": true
+        }
+      }
+    ]
+  }
