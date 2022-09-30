@@ -6,6 +6,9 @@ on:
       - dev/*
 
   workflow_call:
+    secrets:
+      TOKEN:
+        required: true
 
 permissions:
   pull-requests: write
