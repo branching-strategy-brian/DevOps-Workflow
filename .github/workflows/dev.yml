@@ -56,7 +56,7 @@ jobs:
           type: now
           from_branch: ${{needs.Current-Branch.outputs.branch}}
           target_branch: dev/${{needs.Current-Branch.outputs.proyect}}
-          github_token: ${{ github.token }}
+          github_token: ${{ env.GITHUB_TOKEN }}
           message: '${{needs.Current-Branch.outputs.actor}}: Merge feat and dev ${{needs.Current-Branch.outputs.proyect}}'
 
   CreatePullRequest:
