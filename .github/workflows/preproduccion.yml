@@ -1,4 +1,4 @@
-name: Branchyng Strategy PRE
+name: Branchyng Strategy PREPRODUCCION
 on:
   pull_request:
     types: [ assigned, opened, synchronize ]
@@ -6,6 +6,9 @@ on:
       - preproduccion/*
 
   workflow_call:
+    secrets:
+      TOKEN:
+        required: true
 
 permissions:
   pull-requests: write
@@ -53,8 +56,8 @@ jobs:
           type: now
           from_branch: ${{needs.Current-Branch.outputs.branch}}
           target_branch: preproduccion/${{needs.Current-Branch.outputs.proyect}}
-          github_token: ${{ github.token }}
-          message: '${{needs.Current-Branch.outputs.actor}}: Merge estable and preproduccion ${{needs.Current-Branch.outputs.proyect}}'
+          github_token: ${{ env.GITHUB_TOKEN }}
+          message: '${{needs.Current-Branch.outputs.actor}}Merge estable ${{needs.Current-Branch.outputs.proyect}} and preproduccion ${{needs.Current-Branch.outputs.proyect}}'
 
   CreatePullRequest:
     runs-on: ubuntu-latest
@@ -65,4 +68,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Make changes to pull request
         run:
-          curl -X POST -u $GITHUB_TOKEN:x-oauth-basic -H "Accept:application/vnd.github+json" https://api.github.com/repos/bgarrido2314/branching-strategy/pulls -d '{"title":"Preproduccion/${{needs.Current-Branch.outputs.proyect}}-Main","body":"Please pull these new changes in!","head":"preproduccion/${{needs.Current-Branch.outputs.proyect}}","base":"main"}'
+          curl -X POST -u ${{ env.GITHUB_TOKEN }}:x-oauth-basic -H "Accept:application/vnd.github+json" https://api.github.com/repos/branching-strategy-brian/DevOps-Workflow/pulls -d '{"title":"Preproduccion/${{needs.Current-Branch.outputs.proyect}}-Main","body":"Please pull these new changes in!","head":"preproduccion/${{needs.Current-Branch.outputs.proyect}}","base":"main"}'
