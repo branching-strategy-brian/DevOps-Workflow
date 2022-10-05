@@ -3,7 +3,7 @@ on:
   pull_request:
     types: [ assigned, opened, synchronize ]
     branches:
-      - dev/*
+      - dev/celula2
 
   workflow_call:
     secrets:
